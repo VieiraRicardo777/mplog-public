@@ -1,0 +1,136 @@
+
+<div class="transportadora" id="logistica">    
+
+    <h3 data-anime="top">Logistica fora da caixa!</h3> 
+     
+          
+            <h4 class="pl-5"><span style="margin-left: -93px;" class="animate-border border-black"></span>
+            <span class="w-100 text-center pl-3"></span> Soluções logísticas para todas as demandas
+            <span class="animate-border border-black float-right"></span></h4>
+        
+        <div class="col-md-10 mx-auto" data-anime="left">
+
+            
+            <div class="col-md-3 float-left text-center">
+                    <img id="myImg" src="../../../assets/icones/recebimento.png" alt="" title="" class="img-efect" />
+                    <h5>Recebimento</h5>
+                    
+                    <p>Conferência de material completa, com todo o processo registrado inclusive de inconformidades.</p>
+            </div>
+    
+            <div class="col-md-3 float-left">
+                    <img id="myImg" src="../../../assets/icones/armazenagem.png" alt="" title="" class="img-efect" />
+                    <h5>Armazenagem</h5>
+                    
+                    <p>Armazenagem em pátio logístico amplo e bem estruturado. Protegido de ação do tempo.</p>
+            </div>
+    
+            <div class="col-md-3 float-left">
+                    <img id="myImg" src="../../../assets/icones/consultoria.png" alt="" title="" class="img-efect" />
+                    <h5>Consultoria Fiscal</h5>
+                    
+                    <p>Total suporte ao aspecto fiscal dos seus clientes, esclarecimentos de dúvidas e mais.</p>
+            </div>
+    
+            <div class="col-md-3 float-left">
+                    <img id="myImg" src="../../../assets/icones/transporte-areo.png" alt="" title="" class="img-efect" />
+                    <h5>Transportes</h5>
+                    
+                    <p>Transporte de carga por todo o território nacional de modo expresso ou tradicional.</p>
+            </div>
+    
+
+        </div>
+
+        <!-------------------------------- oque nos torna ---------------------------->
+
+<div class="oque-home" data-anime="left">
+  <h3>Nossos diferenciais</h3>
+      
+      
+  <div class="items">
+    
+      
+                        
+    <div class="container-illu">
+         <img src="../../../assets/icones/certificado.png" alt="" title="" class="img-oque w-100 h-10" />
+    </div>
+                 
+      <p>Empresa com todas as certificações e responsável técnica farmacêutica.</p>
+  </div>
+  
+  <div class="items">
+  
+    <div class="container-illu">
+         <img src="../../../assets/icones/estrutura.png" alt="" title="" class="img-oque" />
+    </div>
+    
+      
+      <p>Estrutura dentro de galpão logístico/segurança</p><br>
+  </div>
+  
+
+  
+  <div class="items" >
+    
+    <div class="container-illu">
+         <img src="../../../assets/icones/flexibilidade.png" alt="" title="" class="img-oque" />
+    </div>
+    
+    
+      <p>Flexibilidade sem afetar os processos</p><br><br>
+  </div> 
+
+</div>
+
+</div>
+
+<!-------------------------------- deixe home ---------------------------->
+
+
+        
+        <script>
+
+const debounce = function(func, wait, immediate) {
+        let timeout;
+        return function(...args) {
+          const context = this;
+          const later = function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+          };
+          const callNow = immediate && !timeout;
+          clearTimeout(timeout);
+          timeout = setTimeout(later, wait);
+          if (callNow) func.apply(context, args);
+        };
+      };
+      
+      const target = document.querySelectorAll('[data-anime]');
+      const animationClass = 'animate';
+      
+      function animeScroll() {
+        const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
+        target.forEach(function(element) {
+          if((windowTop) > element.offsetTop) {
+            element.classList.add(animationClass);
+          } else {
+            element.classList.remove(animationClass);
+          }
+        })
+      }
+      
+      animeScroll();
+      
+      if(target.length) {
+        window.addEventListener('scroll', debounce(function() {
+          animeScroll();
+        }, 200));
+      }
+   
+
+
+
+
+        </script>
+          
