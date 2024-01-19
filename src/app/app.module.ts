@@ -12,6 +12,10 @@ import { HomeComponent } from './Pages/home/home.component';
 import { ContainerComponent } from './shared/container/container.component';
 import { CardComponent } from './shared/card/card.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { ContatoComponent } from './shared/contato/contato.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatChipsModule } from '@angular/material/chips';
+
 
 
 
@@ -23,14 +27,18 @@ import { FooterComponent } from './shared/footer/footer.component';
     HomeComponent,
     ContainerComponent,
     CardComponent,
-    FooterComponent
+    FooterComponent,
+    ContatoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatToolbarModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule,
+    MatChipsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

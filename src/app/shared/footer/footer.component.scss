@@ -5,30 +5,33 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  padding: 2%;
+  padding: 0.5%;
   text-align: center;
 
-  .copyright {
-    color: white;
-    
-  }
 
   .inner {
-    display: flex;
     justify-content: space-between;
     align-items: center;
-    img {
-      max-width: 100%;
-      max-height: 45px;
-    }
     ul {
-      padding: 0;
       list-style: none;
-      &.socials {
-        li {
-          text-align: left;
+      li {
+        img {
+          margin-top: 1px;
+
         }
       }
+     
     }
+  }
+}
+
+.copyright {
+  color: white;
+  
+}
+
+.socials {
+  li {
+    text-align: center;
   }
 }
