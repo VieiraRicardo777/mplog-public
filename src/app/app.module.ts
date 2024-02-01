@@ -15,8 +15,11 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { ContatoComponent } from './shared/contato/contato.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatChipsModule } from '@angular/material/chips';
-
-
+import { HttpClientModule } from '@angular/common/http';
+import { ContatoService } from './contato.service';
+import { ReactiveFormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 
 
@@ -39,10 +42,14 @@ import { MatChipsModule } from '@angular/material/chips';
     BrowserAnimationsModule,
     MatButtonModule,
     MatDialogModule,
-    MatChipsModule
+    MatChipsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+    BsDropdownModule.forRoot()
 
   ],
-  providers: [],
+  providers: [ContatoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
